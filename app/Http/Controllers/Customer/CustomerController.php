@@ -67,7 +67,7 @@ class CustomerController extends Controller
             'telephone'     => $request->telephone,
             'address'       => $request->address,
             'gender'        => $request->gender,
-        ], $this->auditTableInsert());
+        ], $this->auditTableUpdate());
 
         Customer::where('id', $id)->update($data);
 

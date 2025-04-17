@@ -35,4 +35,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/customer/delete/{param}', [CustomerController::class, 'destroy']);
 
     Route::get('/product', [ProductController::class, 'index']);
+    Route::post('/product/add', [ProductController::class, 'store']);
+    Route::get('/product/edit/{param}', [ProductController::class, 'edit']);
+    Route::post('/product/update/{param}', [ProductController::class, 'update']);
+    Route::get('/product/delete/{param}', [ProductController::class, 'destroy']);
 });
